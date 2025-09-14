@@ -17,18 +17,21 @@ public class Product {
 
     @Override
     public boolean equals(Object o) {
+        if  (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
         Product product = (Product) o;
+//        if (price != product.price) return false;
         return price == product.price && Objects.equals(name, product.name);
     }
 
-//    @Override
-//    public int hashCode() {
-//        int result = Objects.hashCode(name);
-//        result = 31 * result + price;
-//        return result;
-//    }
+    @Override
+    public int hashCode() {
+        int result = Objects.hashCode(name);
+        result = 31 * result + price;
+        return result;
+    }
+
     //    public boolean equals(Object obj) {
 //        if (obj == this) {
 //            return true;
@@ -43,7 +46,7 @@ public class Product {
 //        if (this.name != null ) {
 //            return this.name.equals(product.name);
 //
-//        } elese {
+//        } else {
 //            return product.name == null;
 //        }
 //    }
