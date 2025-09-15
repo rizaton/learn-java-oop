@@ -1,4 +1,6 @@
-package coding.rizaton.data;
+package coding.rizaton.application;
+
+import coding.rizaton.data.Company;
 
 public class CompanyApp {
     public static void main(String[] args) {
