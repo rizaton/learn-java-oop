@@ -17,5 +17,9 @@ public class ValidationApp {
         } finally {
             System.out.println("Always successful");
         }
+
+        LoginRequest loginRequest1 = new LoginRequest("Iza", null);
+        ValidationUtil.validateRuntime(loginRequest1);
+        System.out.println("Successfully validated");
     }
 }
